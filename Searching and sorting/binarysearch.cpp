@@ -21,7 +21,7 @@ int main()
     high = n-1 ;
     // binary serach
     while (high>=low){
-        int mid =(low + high)/2;
+        int mid =low + (high - low)/2;
         if (arr[mid] == search){
             cout<<"element found at "<< mid+1 <<" location"<<endl;
             break;
