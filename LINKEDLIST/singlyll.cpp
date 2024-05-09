@@ -9,6 +9,15 @@ class node{
         this->data = data ;
         this->next = NULL;
     }
+     ~node() {
+        int value = this -> data;
+        //memory free
+        if(this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout << " memory is free for node with data " << value << endl;
+    }
 };
 
 void Insert_at_head(node* &head, int data){
@@ -49,6 +58,39 @@ void Insert_at_poistion(node* &tail,node* &head ,int data ,int poistion){
     temp->next = nodetoinsert;  
 }
 
+  //deletion 
+  void deleteNode(int poistion ,node* &head,node* &tail){
+    //deleting first node
+    if(poistion == 1){
+        node *temp = head;
+        head = head->next;
+        //memory free
+        temp->next =NULL;
+        delete temp;
+    }
+
+    else{
+
+        //deleting other than first node
+        node* curr  = head;
+        node*prev = NULL;
+        int cnt = 1;
+
+        while(cnt<poistion){
+            prev = curr;
+            curr = curr->next ;
+            cnt++;
+        }
+        // if deleting last node
+        if(curr->next == NULL){
+          tail = prev;
+           // tail->next = NULL;
+        }
+        prev->next = curr->next;
+        curr->next  =NULL;
+        delete curr;
+    }
+  }
 void print(node* &head){
     node *temp = head;
     while( temp != NULL ){
@@ -79,10 +121,21 @@ int main(){
 
          Insert_at_poistion(tail,head,7,2);    
          Insert_at_poistion(tail,head,9,4);             
-         Insert_at_poistion(tail,head,5,1);             
-         Insert_at_poistion(tail,head,19,9);              
-         print(head);
+        print(head);
+         cout<<endl;
+         cout<<"head : "<<head->data<<endl;
+         cout<<"tail : "<<tail->data<<endl;
 
+
+          deleteNode(3,head,tail);             
+          print(head);
+           cout<<endl;
+         cout<<"head : "<<head->data<<endl;
+         cout<<"tail : "<<tail->data<<endl;
+
+          deleteNode(6,head,tail);             
+          print(head);
+           cout<<endl;
          cout<<"head : "<<head->data<<endl;
          cout<<"tail : "<<tail->data<<endl;
     return 0;
