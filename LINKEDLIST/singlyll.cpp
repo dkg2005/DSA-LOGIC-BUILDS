@@ -22,7 +22,7 @@ class node{
 
 void Insert_at_head(node* &head, int data){
     node*temp = new node(data);
-    temp->next =head;
+    temp->next =head; 
     head = temp;
 }
 
@@ -60,6 +60,13 @@ void Insert_at_poistion(node* &tail,node* &head ,int data ,int poistion){
 
   //deletion 
   void deleteNode(int poistion ,node* &head,node* &tail){
+    
+    //If linked list is already empty
+    if(head == NULL){
+        cout<<" LINKED LIST IS EMPTY";
+        return;
+    }
+
     //deleting first node
     if(poistion == 1){
         node *temp = head;
@@ -87,7 +94,7 @@ void Insert_at_poistion(node* &tail,node* &head ,int data ,int poistion){
            // tail->next = NULL;
         }
         prev->next = curr->next;
-        curr->next  =NULL;
+        curr->next = NULL;
         delete curr;
     }
   }
