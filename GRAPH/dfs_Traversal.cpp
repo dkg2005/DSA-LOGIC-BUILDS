@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+// dfs traversal of undirected graph
+
 void addEdge(vector<vector<int>> &adj, int s, int t) {
     adj[s].push_back(t);
     adj[t].push_back(s); // Remove this line
