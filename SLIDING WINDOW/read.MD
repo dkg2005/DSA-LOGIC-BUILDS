@@ -6,7 +6,7 @@ PRINT THE MAXIMUM ELE OF EACH SUBARRAY OF SIZE K
 
 
 
-# CODE..
+# LOGIC CODE..
  ```
 // #include<iostream>
 // #include<climits>
@@ -55,10 +55,11 @@ PRINT THE MAXIMUM ELE OF EACH SUBARRAY OF SIZE K
 //QUESTION : PRINT THE COUNT OF DISTINCT ELEMNETS OF  THE SUBARRAY OF SIZE K
 
 
-# CODE ..
+# LOGIC CODE ..
+
+   ```
 // SLIDING WINDOW 
    
-   ```
     // map<int,int>mp;
     // for(int i=0; i<k; i++){
     //     mp[arr[i]]++;
@@ -76,4 +77,24 @@ PRINT THE MAXIMUM ELE OF EACH SUBARRAY OF SIZE K
     //      cout<<mp.size()<<endl;
          
     // }
-    ```
+```
+
+
+//QUESTION : FIND THE LENGTH OF LONGEST SUBARRAY WITH UNIQUE ELEMENTS 
+
+
+# LOGIC CODE..
+ ```
+ //  int maxlen=0;
+    // for(int i=0; i<n; i++){
+    //      set<int>st; 
+    //     for(int j=i; j<n; j++){
+    //         if(st.find(arr[j]) != st.end()){
+    //             break;
+    //         }
+    //         st.insert(arr[j]);
+    //         maxlen = max(maxlen,j-i+1);
+    //     }
+    // }
+    // cout<<maxlen<<endl;
+ ```
