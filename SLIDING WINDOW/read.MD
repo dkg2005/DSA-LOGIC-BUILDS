@@ -4,9 +4,10 @@
 
 PRINT THE MAXIMUM ELE OF EACH SUBARRAY OF SIZE K
 
-CODE..
 
-#
+
+# CODE..
+ ```
 // #include<iostream>
 // #include<climits>
 // #include<set>
@@ -49,4 +50,30 @@ CODE..
     // }
     return 0;
 }
-#
+```
+
+//QUESTION : PRINT THE COUNT OF DISTINCT ELEMNETS OF  THE SUBARRAY OF SIZE K
+
+
+# CODE ..
+// SLIDING WINDOW 
+   
+   ```
+    // map<int,int>mp;
+    // for(int i=0; i<k; i++){
+    //     mp[arr[i]]++;
+    // }
+    // cout<<mp.size()<<endl;
+    
+    // for(int i=1; i<=n-k; i++){
+        
+    //     mp[arr[i-1]]--;
+        
+    //     if(mp[arr[i-1]] == 0){
+    //         mp.erase(arr[i-1]);
+    //     }
+    //      mp[arr[i+k-1]]++;
+    //      cout<<mp.size()<<endl;
+         
+    // }
+    ```
