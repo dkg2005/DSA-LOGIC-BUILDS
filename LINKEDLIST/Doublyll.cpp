@@ -141,7 +141,6 @@ void deleteNode(int position, Node* & head,Node* &tail) {
         curr -> prev = NULL;
         prev -> next = curr -> next;
         curr -> next = NULL;
-
         delete curr;
 
     }
@@ -193,8 +192,9 @@ int main() {
     print(head);
     cout << "head  " << head -> data << endl;
     cout << "tail  " << tail -> data << endl;
+    cout<<"deleting Nodes";
+    deleteNode(5, head, tail);
 
-    deleteNode(7, head, tail);
     print(head);
     cout << "head  " << head -> data << endl;
     cout << "tail  " << tail -> data << endl;
